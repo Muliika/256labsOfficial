@@ -1,9 +1,13 @@
-
+import { AnimatedCTASection } from "@/components/AnimatedCta";
+import Cta from "@/components/Cta";
+import { HeroSection } from "@/components/Hero";
 
 export default function Home() {
   return (
     <div className="">
-      <h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
+      <HeroSection />
+      {/* <Cta /> */}
+      <AnimatedCTASection />
     </div>
   );
 }
