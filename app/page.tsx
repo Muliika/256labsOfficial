@@ -1,5 +1,5 @@
-import { AnimatedCTASection } from "@/components/AnimatedCta";
-import Cta from "@/components/Cta";
+// import { AnimatedCTASection } from "@/components/AnimatedCta";
+// import Cta from "@/components/Cta";
 import { HeroSection } from "@/components/Hero";
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
     <div className="">
       <HeroSection />
       {/* <Cta /> */}
-      <AnimatedCTASection />
+      {/* <AnimatedCTASection /> */}
     </div>
   );
 }
