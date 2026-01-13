@@ -1,4 +1,5 @@
 import { ColophonSection } from "@/components/_Main/ColophoneSection";
+import { ContactSection } from "@/components/_Main/ContactSection";
 import { HeroSection } from "@/components/_Main/HeroSection";
 import { PrinciplesSection } from "@/components/_Main/PrinciplesSection";
 import { SideNav } from "@/components/_Main/SideNav";
@@ -16,6 +17,7 @@ export default function Home() {
         <SignalsSection />
         <WorkSection />
         <PrinciplesSection />
+        <ContactSection />
         <ColophonSection />
       </div>
     </main>

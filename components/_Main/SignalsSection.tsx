@@ -9,30 +9,30 @@ gsap.registerPlugin(ScrollTrigger);
 
 const signals = [
   {
-    date: "2025.06.10",
-    title: "Signal Field",
-    note: "New interface paradigm for ambient computing environments.",
+    date: "...",
+    title: "Software Development",
+    note: "We build reliable web and mobile applications designed for real deployment environments — including low-connectivity contexts.",
   },
   {
-    date: "2025.05.28",
-    title: "Silent Agent",
-    note: "Orchestration layer for autonomous design systems.",
+    date: "...",
+    title: "Data Management",
+    note: "We design data collection tools, dashboards, and research systems that prioritize accuracy, usability, and insight.",
   },
   {
-    date: "2025.05.15",
-    title: "Noir Grid",
-    note: "Typographic system for editorial interfaces.",
+    date: "...",
+    title: "Digital Innovation",
+    note: "We prototype, test, and refine ideas before scaling — reducing risk and increasing impact.",
   },
-  {
-    date: "2025.04.30",
-    title: "Project Lattice",
-    note: "Structural framework for adaptive layouts.",
-  },
-  {
-    date: "2025.04.12",
-    title: "Echo Chamber",
-    note: "Audio-visual synthesis in browser environments.",
-  },
+  // {
+  //   date: "2025.04.30",
+  //   title: "Project Lattice",
+  //   note: "Structural framework for adaptive layouts.",
+  // },
+  // {
+  //   date: "2025.04.12",
+  //   title: "Echo Chamber",
+  //   note: "Audio-visual synthesis in browser environments.",
+  // },
 ];
 
 export function SignalsSection() {
@@ -140,10 +140,10 @@ export function SignalsSection() {
       {/* Section header */}
       <div ref={headerRef} className="mb-16 pr-6 md:pr-12">
         <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
-          01 / Signals
+          01 / Our Expertise
         </span>
         <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">
-          WHAT&apos;S NEW
+          WHAT WE DO
         </h2>
       </div>
 

@@ -16,41 +16,40 @@ export function PrinciplesSection() {
     {
       number: "01",
       titleParts: [
-        { text: "INTERFACE", highlight: true },
-        { text: " MINIMALISM", highlight: false },
+        { text: "UNDERSTAND", highlight: true },
+        { text: " THE PROBLEM", highlight: false },
       ],
       description:
-        "Reduce until only the essential remains. Every element earns its place.",
+        "We start with context — users, constraints, and real needs.",
       align: "left",
     },
     {
       number: "02",
       titleParts: [
-        { text: "SYSTEMS", highlight: true },
-        { text: " OVER SCREENS", highlight: false },
+        { text: "EXPERIMENT ", highlight: true },
+        { text: "& PROTOTYPE", highlight: false },
       ],
       description:
-        "Design behaviors, not just layouts. Build logic that scales.",
+        "We test ideas early using lightweight prototypes and pilots.",
       align: "right",
     },
     {
       number: "03",
       titleParts: [
-        { text: "CONTROLLED ", highlight: false },
-        { text: "TENSION", highlight: true },
+        { text: "BUILD ", highlight: false },
+        { text: "& REFINE", highlight: true },
       ],
       description:
-        "Balance between restraint and expression. Confidence without excess.",
+        "We develop practical, scalable solutions informed by real data.",
       align: "left",
     },
     {
       number: "04",
       titleParts: [
-        { text: "SIGNAL ", highlight: false },
-        { text: "CLARITY", highlight: true },
+        { text: "DEPLOY ", highlight: false },
+        { text: "& LEARN", highlight: true },
       ],
-      description:
-        "Communication that cuts through noise. Precision in every interaction.",
+      description: "We support rollout, measure usage, and iterate.",
       align: "right",
     },
   ];

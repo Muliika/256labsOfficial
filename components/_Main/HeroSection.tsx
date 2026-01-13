@@ -46,11 +46,11 @@ export function HeroSection() {
       <AnimatedNoise opacity={0.03} />
 
       {/* Left vertical labels */}
-      <div className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2">
+      {/* <div className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2">
         <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground -rotate-90 origin-left block whitespace-nowrap">
           SIGNAL
         </span>
-      </div>
+      </div> */}
 
       {/* Main content */}
       <div ref={contentRef} className="flex-1 w-full">
@@ -94,11 +94,11 @@ export function HeroSection() {
       </div>
 
       {/* Floating info tag */}
-      <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12">
+      {/* <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12">
         <div className="border border-border px-4 py-2 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
           v.01 / Experimental Build
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
