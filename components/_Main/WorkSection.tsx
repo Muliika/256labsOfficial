@@ -9,42 +9,42 @@ gsap.registerPlugin(ScrollTrigger);
 
 const experiments = [
   {
-    title: "Project Lattice",
-    medium: "Interface Study",
+    title: "256Labs Insights",
+    medium: "Data Collection & Analysis",
     description:
       "Structural framework for adaptive layouts in dynamic content systems.",
     span: "col-span-2 row-span-2",
   },
-  {
-    title: "Signal Field",
-    medium: "Agent Orchestration",
-    description: "Autonomous coordination layer for multi-agent environments.",
-    span: "col-span-1 row-span-1",
-  },
-  {
-    title: "Silent Agent",
-    medium: "Visual System",
-    description: "Non-intrusive interface patterns for ambient computing.",
-    span: "col-span-1 row-span-2",
-  },
-  {
-    title: "Noir Grid",
-    medium: "Typography",
-    description: "High-contrast typographic system for editorial interfaces.",
-    span: "col-span-1 row-span-1",
-  },
-  {
-    title: "Echo Chamber",
-    medium: "Audio-Visual",
-    description: "Generative soundscapes mapped to interface interactions.",
-    span: "col-span-2 row-span-1",
-  },
-  {
-    title: "Void Protocol",
-    medium: "Experimental",
-    description: "Negative space as primary interaction medium.",
-    span: "col-span-1 row-span-1",
-  },
+  //   {
+  //     title: "Signal Field",
+  //     medium: "Agent Orchestration",
+  //     description: "Autonomous coordination layer for multi-agent environments.",
+  //     span: "col-span-1 row-span-1",
+  //   },
+  //   {
+  //     title: "Silent Agent",
+  //     medium: "Visual System",
+  //     description: "Non-intrusive interface patterns for ambient computing.",
+  //     span: "col-span-1 row-span-2",
+  //   },
+  //   {
+  //     title: "Noir Grid",
+  //     medium: "Typography",
+  //     description: "High-contrast typographic system for editorial interfaces.",
+  //     span: "col-span-1 row-span-1",
+  //   },
+  //   {
+  //     title: "Echo Chamber",
+  //     medium: "Audio-Visual",
+  //     description: "Generative soundscapes mapped to interface interactions.",
+  //     span: "col-span-2 row-span-1",
+  //   },
+  //   {
+  //     title: "Void Protocol",
+  //     medium: "Experimental",
+  //     description: "Negative space as primary interaction medium.",
+  //     span: "col-span-1 row-span-1",
+  //   },
 ];
 
 export function WorkSection() {
