@@ -1,143 +1,94 @@
-import { Button } from "./ui/button";
-import { ArrowRight } from "lucide-react";
-import { ParticleTextEffect } from "@/components/_Hero/ParticleTextEffect";
-// import { InfiniteSlider } from "@/components/_Hero/InfiniteSlider";
-// import { ProgressiveBlur } from "@/components/_Hero/ProgressiveBlur";
+"use client";
 
-export function HeroSection() {
+import type React from "react";
+
+import { useEffect, useRef, useState } from "react";
+import { MeshGradient } from "@paper-design/shaders-react";
+
+interface ShaderBackgroundProps {
+  children: React.ReactNode;
+}
+
+export default function ShaderBackground({ children }: ShaderBackgroundProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    const handleMouseEnter = () => setIsActive(true);
+    const handleMouseLeave = () => setIsActive(false);
+
+    const container = containerRef.current;
+    if (container) {
+      container.addEventListener("mouseenter", handleMouseEnter);
+      container.addEventListener("mouseleave", handleMouseLeave);
+    }
+
+    return () => {
+      if (container) {
+        container.removeEventListener("mouseenter", handleMouseEnter);
+        container.removeEventListener("mouseleave", handleMouseLeave);
+      }
+    };
+  }, []);
+
   return (
-    <section className="py-20 px-4 relative overflow-hidden min-h-screen flex flex-col justify-between">
-      <div className="flex-1 flex items-start justify-center pt-20 pb-8">
-        <ParticleTextEffect
-          words={["Experiment", "Build", "Impact", "256Labs"]}
-        />
-      </div>
-      <div className="container mx-auto text-center relative z-10 pb-8 ">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-balance">
-            We design, test, and scale technology that solves problems and
-            powers innovation.
-          </h2>
+    <div
+      ref={containerRef}
+      className="min-h-screen bg-black relative overflow-hidden"
+    >
+      {/* SVG Filters */}
+      <svg className="absolute inset-0 w-0 h-0">
+        <defs>
+          <filter
+            id="glass-effect"
+            x="-50%"
+            y="-50%"
+            width="200%"
+            height="200%"
+          >
+            <feTurbulence baseFrequency="0.005" numOctaves="1" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="0.3" />
+            <feColorMatrix
+              type="matrix"
+              values="1 0 0 0 0.02
+                      0 1 0 0 0.02
+                      0 0 1 0 0.05
+                      0 0 0 0.9 0"
+              result="tint"
+            />
+          </filter>
+          <filter
+            id="gooey-filter"
+            x="-50%"
+            y="-50%"
+            width="200%"
+            height="200%"
+          >
+            <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
+            <feColorMatrix
+              in="blur"
+              mode="matrix"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+              result="gooey"
+            />
+            <feComposite in="SourceGraphic" in2="gooey" operator="atop" />
+          </filter>
+        </defs>
+      </svg>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button
-              size="lg"
-              className="bg-white hover:bg-gray-200 text-black group"
-            >
-              Start Free Trial
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-gray-600 text-white hover:bg-gray-800 bg-transparent"
-            >
-              Watch Demo
-            </Button>
-          </div>
+      {/* Background Shaders */}
+      <MeshGradient
+        className="absolute inset-0 w-full h-full"
+        colors={["#000000", "#000000", "#ffffff", "#000000", "#000000"]}
+        speed={0.3}
+      />
+      <MeshGradient
+        className="absolute inset-0 w-full h-full opacity-60"
+        colors={["#000000", "#2a2b2a", "#000000", "#000000"]}
+        speed={0.2}
+      />
 
-          {/* <div className="mt-16 mb-8">
-            <div className="group relative m-auto max-w-6xl">
-              <div className="flex flex-col items-center md:flex-row">
-                <div className="md:max-w-44 md:border-r md:border-gray-600 md:pr-6 mb-4 md:mb-0">
-                  <p className="text-end text-sm text-gray-400">
-                    Powering the best teams
-                  </p>
-                </div>
-                <div className="relative py-6 md:w-[calc(100%-11rem)]">
-                  <InfiniteSlider durationOnHover={20} duration={40} gap={112}>
-                    <div className="flex">
-                      <img
-                        className="mx-auto h-5 w-fit invert opacity-60 hover:opacity-100 transition-opacity"
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/nvidia-TAN2JNiFDeluYk9hlkv4qXwWtfx5Cy.svg"
-                        alt="Nvidia Logo"
-                        height="20"
-                        width="auto"
-                      />
-                    </div>
-
-                    <div className="flex">
-                      <img
-                        className="mx-auto h-4 w-fit invert opacity-60 hover:opacity-100 transition-opacity"
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/column-qYeLfzzj1ni9E7PhooLL6Mzip5Zeb4.svg"
-                        alt="Column Logo"
-                        height="16"
-                        width="auto"
-                      />
-                    </div>
-                    <div className="flex">
-                      <img
-                        className="mx-auto h-4 w-fit invert opacity-60 hover:opacity-100 transition-opacity"
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/github-twQNbc5nAy2jUs7yh5xic8hsEfBYpQ.svg"
-                        alt="GitHub Logo"
-                        height="16"
-                        width="auto"
-                      />
-                    </div>
-                    <div className="flex">
-                      <img
-                        className="mx-auto h-5 w-fit invert opacity-60 hover:opacity-100 transition-opacity"
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/nike-H0OCso4JdUtllUTdAverMAjJmcKVXU.svg"
-                        alt="Nike Logo"
-                        height="20"
-                        width="auto"
-                      />
-                    </div>
-                    <div className="flex">
-                      <img
-                        className="mx-auto h-5 w-fit invert opacity-60 hover:opacity-100 transition-opacity"
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/lemonsqueezy-ZL7mmIzqR10hWcodoO19ajha8AS9VK.svg"
-                        alt="Lemon Squeezy Logo"
-                        height="20"
-                        width="auto"
-                      />
-                    </div>
-                    <div className="flex">
-                      <img
-                        className="mx-auto h-4 w-fit invert opacity-60 hover:opacity-100 transition-opacity"
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/laravel-sDCMR3A82V8F6ycZymrDlmiFpxyUd4.svg"
-                        alt="Laravel Logo"
-                        height="16"
-                        width="auto"
-                      />
-                    </div>
-                    <div className="flex">
-                      <img
-                        className="mx-auto h-7 w-fit invert opacity-60 hover:opacity-100 transition-opacity"
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/lilly-Jhslk9VPUVAVK2SCJmCGTEbqKMef5v.svg"
-                        alt="Lilly Logo"
-                        height="28"
-                        width="auto"
-                      />
-                    </div>
-
-                    <div className="flex">
-                      <img
-                        className="mx-auto h-6 w-fit invert opacity-60 hover:opacity-100 transition-opacity"
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/openai-5TPubXl1hnLxeIs4ygVSLjJcUoBOCB.svg"
-                        alt="OpenAI Logo"
-                        height="24"
-                        width="auto"
-                      />
-                    </div>
-                  </InfiniteSlider>
-
-                  <ProgressiveBlur
-                    className="pointer-events-none absolute left-0 top-0 h-full w-20"
-                    direction="left"
-                    blurIntensity={1}
-                  />
-                  <ProgressiveBlur
-                    className="pointer-events-none absolute right-0 top-0 h-full w-20"
-                    direction="right"
-                    blurIntensity={1}
-                  />
-                </div>
-              </div>
-            </div>
-          </div> */}
-        </div>
-      </div>
-    </section>
+      {children}
+    </div>
   );
 }
