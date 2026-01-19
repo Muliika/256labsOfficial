@@ -142,7 +142,7 @@ export function SplitFlapMuteToggle({
   return (
     <button
       onClick={audio.toggleMute}
-      className={`inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors duration-200 ${className}`}
+      className={`inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-muted-foreground hover:text-accent transition-colors duration-200 ${className}`}
       aria-label={audio.isMuted ? "Unmute sound effects" : "Mute sound effects"}
     >
       {audio.isMuted ? (
@@ -239,7 +239,7 @@ function SplitFlapChar({
   const tileDelay = 0.15 * index;
 
   const bgColor = isSettled ? "hsl(0, 0%, 0%)" : "rgba(249, 115, 22, 0.2)";
-  const textColor = isSettled ? "#ffffff" : "#f97316";
+  const textColor = isSettled ? "#ffffff" : "#ff0000";
 
   useEffect(() => {
     if (intervalRef.current) clearInterval(intervalRef.current);

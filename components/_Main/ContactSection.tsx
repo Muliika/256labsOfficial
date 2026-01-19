@@ -101,6 +101,59 @@ export function ContactSection() {
         </div>
 
         {/* Right column - Links */}
+        {/* <div ref={linksRef} className="flex flex-col gap-6">
+          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-2">
+            Connect
+          </h4>
+
+          <a
+            href="#"
+            className="group flex items-center justify-between py-4 border-b border-border/30 hover:border-accent/50 transition-colors duration-300"
+          >
+            <span className="font-mono text-xs uppercase tracking-widest text-foreground/80 group-hover:text-accent transition-colors duration-300">
+              Twitter / X
+            </span>
+            <span className="font-mono text-[10px] text-muted-foreground group-hover:text-accent transition-colors duration-300">
+              @signal
+            </span>
+          </a>
+
+          <a
+            href="#"
+            className="group flex items-center justify-between py-4 border-b border-border/30 hover:border-accent/50 transition-colors duration-300"
+          >
+            <span className="font-mono text-xs uppercase tracking-widest text-foreground/80 group-hover:text-accent transition-colors duration-300">
+              LinkedIn
+            </span>
+            <span className="font-mono text-[10px] text-muted-foreground group-hover:text-accent transition-colors duration-300">
+              /signal-studio
+            </span>
+          </a>
+
+          <a
+            href="#"
+            className="group flex items-center justify-between py-4 border-b border-border/30 hover:border-accent/50 transition-colors duration-300"
+          >
+            <span className="font-mono text-xs uppercase tracking-widest text-foreground/80 group-hover:text-accent transition-colors duration-300">
+              Dribbble
+            </span>
+            <span className="font-mono text-[10px] text-muted-foreground group-hover:text-accent transition-colors duration-300">
+              /signal
+            </span>
+          </a>
+
+          <a
+            href="#"
+            className="group flex items-center justify-between py-4 border-b border-border/30 hover:border-accent/50 transition-colors duration-300"
+          >
+            <span className="font-mono text-xs uppercase tracking-widest text-foreground/80 group-hover:text-accent transition-colors duration-300">
+              GitHub
+            </span>
+            <span className="font-mono text-[10px] text-muted-foreground group-hover:text-accent transition-colors duration-300">
+              /signal-studio
+            </span>
+          </a>
+        </div> */}
       </div>
     </section>
   );

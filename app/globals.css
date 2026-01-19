@@ -161,7 +161,7 @@
 }
 
 .dark {
-  --accent: oklch(0.75 0.25 45); /* Same orange for dark mode */
+  --accent: oklch(62.793% 0.25768 29.223); /* Same orange for dark mode */
 }
 
 @theme inline {

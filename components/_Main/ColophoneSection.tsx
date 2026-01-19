@@ -83,16 +83,111 @@ export function ColophonSection() {
         </h2>
       </div> */}
 
+      {/* Multi-column layout */}
+      {/* <div
+        ref={gridRef}
+        className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 md:gap-12"
+      >
+        
+        <div className="col-span-1">
+          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">
+            Design
+          </h4>
+          <ul className="space-y-2">
+            <li className="font-mono text-xs text-foreground/80">
+              Signal Studio
+            </li>
+            <li className="font-mono text-xs text-foreground/80">
+              Interface Lab
+            </li>
+          </ul>
+        </div>
+
+        
+        <div className="col-span-1">
+          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">
+            Stack
+          </h4>
+          <ul className="space-y-2">
+            <li className="font-mono text-xs text-foreground/80">Next.js</li>
+            <li className="font-mono text-xs text-foreground/80">
+              Tailwind CSS
+            </li>
+            <li className="font-mono text-xs text-foreground/80">Vercel</li>
+          </ul>
+        </div>
+
+        
+        <div className="col-span-1">
+          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">
+            Typography
+          </h4>
+          <ul className="space-y-2">
+            <li className="font-mono text-xs text-foreground/80">Bebas Neue</li>
+            <li className="font-mono text-xs text-foreground/80">Inter</li>
+            <li className="font-mono text-xs text-foreground/80">Geist Mono</li>
+          </ul>
+        </div>
+
+        
+        <div className="col-span-1">
+          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">
+            Location
+          </h4>
+          <ul className="space-y-2">
+            <li className="font-mono text-xs text-foreground/80">Remote</li>
+            <li className="font-mono text-xs text-foreground/80">Everywhere</li>
+          </ul>
+        </div>
+
+        
+        <div className="col-span-1">
+          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">
+            Contact
+          </h4>
+          <ul className="space-y-2">
+            <li>
+              <a
+                href="mailto:hello@signal.studio"
+                className="font-mono text-xs text-foreground/80 hover:text-accent transition-colors duration-200"
+              >
+                Email
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="font-mono text-xs text-foreground/80 hover:text-accent transition-colors duration-200"
+              >
+                Twitter/X
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        
+        <div className="col-span-1">
+          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">
+            Year
+          </h4>
+          <ul className="space-y-2">
+            <li className="font-mono text-xs text-foreground/80">2025</li>
+            <li className="font-mono text-xs text-foreground/80">Ongoing</li>
+          </ul>
+        </div>
+      </div> */}
+
       {/* Bottom copyright */}
       <div
         ref={footerRef}
         className="mt-24 pt-8 border-t border-border/20 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
       >
         <p className="font-mono text-[10px] text-muted-foreground uppercase tracking-widest">
-          © 2025 Signal. All rights reserved.
+          © 2026 256LABS. All rights reserved.
         </p>
         <p className="font-mono text-[10px] text-muted-foreground">
-          Designed with intention. Built with precision.
+          256LABS exists to create that space — where ideas are tested, refined,
+          and turned into tools that matter.
         </p>
       </div>
     </section>

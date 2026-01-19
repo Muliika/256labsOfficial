@@ -63,13 +63,13 @@ export function HeroSection() {
           </div>
         </SplitFlapAudioProvider>
 
-        <h2 className="font-[var(--font-bebas)] text-muted-foreground/60 text-[clamp(1rem,3vw,2rem)] mt-4 tracking-wide">
-          Studies in Controlled Environments
-        </h2>
+        {/* <h2 className="font-[var(--font-bebas)] text-muted-foreground/60 text-[clamp(1rem,3vw,2rem)] mt-4 tracking-wide">
+          Experiment, Build, Impact
+        </h2> */}
 
         <p className="mt-12 max-w-md font-mono text-sm text-muted-foreground leading-relaxed">
-          We design systems that behave, not just screens that display. Signals
-          from the edge of what&apos;s shippable.
+          We experiment with software, data, and digital solutions to build
+          practical tools for real-world use.
         </p>
 
         <div className="mt-16 flex items-center gap-8">
